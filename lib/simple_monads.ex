@@ -1,0 +1,2 @@
+defmodule SimpleMonads do
+end
