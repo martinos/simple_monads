@@ -1,4 +1,6 @@
 defmodule Result do
+  @type t(success, failure) :: {:ok, success} | {:error, failure}
+
   def map({:error, result}, _), do: {:error, result}
   def map({:ok, val}, fnc), do: {:ok, fnc.(val)}
   def and_then({:error, result}, _fnc), do: {:error, result}
