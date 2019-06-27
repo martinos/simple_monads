@@ -1,4 +1,4 @@
-defmodule Maybe do
+defmodule SimpleMonads.Maybe do
   def map(nil, _), do: nil
   def map(val, fnc), do: fnc.(val)
 

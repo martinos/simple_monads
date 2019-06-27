@@ -1,6 +1,6 @@
-defmodule ResultTest do
+defmodule SimpleMonads.ResultTest do
   use ExUnit.Case
-  import Result
+  import SimpleMonads.Result
 
   test "map returns the error when the input is an error" do
     assert {:error, "My Error"} |> map(fn _ -> 2 end) == {:error, "My Error"}

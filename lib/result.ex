@@ -1,4 +1,4 @@
-defmodule Result do
+defmodule SimpleMonads.Result do
   @type t(success, failure) :: {:ok, success} | {:error, failure}
 
   def map({:error, result}, _), do: {:error, result}

@@ -1,6 +1,6 @@
-defmodule MaybeTest do
+defmodule SimpleMonads.MaybeTest do
   use ExUnit.Case
-  import Maybe
+  import SimpleMonads.Maybe
 
   test "and_then should return nil if nil is passed as first arg" do
     refute nil |> map(fn -> 3 end)
