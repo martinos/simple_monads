@@ -38,4 +38,12 @@ defmodule SimpleMonads.ResultTest do
   test "converts to an success result when non nil value" do
     assert 12 |> from_maybe("My Error") == {:ok, 12}
   end
+
+  test "with_default converts to the value on success" do
+    assert {:ok, 12} |> with_default(0) == 12
+  end
+
+  test "with_default converts to the default on failure" do
+    assert {:error, "This is an error"} |> with_default(0) == 0
+  end
 end

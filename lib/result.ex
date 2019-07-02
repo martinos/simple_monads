@@ -24,4 +24,7 @@ defmodule SimpleMonads.Result do
 
   def from_maybe(nil, error), do: {:error, error}
   def from_maybe(val, _fnc), do: {:ok, val}
+
+  def with_default({:error, _}, default), do: default
+  def with_default({:ok, a}, _), do: a
 end
